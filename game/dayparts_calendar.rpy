@@ -1,4 +1,8 @@
-﻿
+## Just drop this in your game and call dayparts_calendar_example 
+
+## Once happy, adjust the default gt = DaypartsCalendar( part and use similar to the example label
+
+
 init python:
 
     import time, datetime
