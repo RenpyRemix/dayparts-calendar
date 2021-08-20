@@ -31,3 +31,7 @@ The available names are:
     {day_part} ## String day part, as supplied in initialization
 ```
     
+
+[![Support me on Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=19978585)
+
+[Return to Home Page](README.md)
