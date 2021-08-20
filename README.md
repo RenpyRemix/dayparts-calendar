@@ -19,6 +19,10 @@ If you name a day part "Afternoon", do not expect any "%H" output to also be in 
 [![Support me on Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=19978585)
 
 
+### Further Reading:
+
+The overview of the system is more fully explained in [DayParts Calendar Overview](explain_dayparts.md)
+
 ### Please note:
 
 The way this approach works might not be suitable for complete beginners. It is a basic platform on which to build a system that might grow to include other features. As such it will likely require some knowledge of Ren'Py in order to extend it to your particular needs. 
