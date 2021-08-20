@@ -2,6 +2,7 @@
 
 Rather than detailing the class itself, let's start with the initialization and usage syntaxes:
 
+## Initialization
 ```py
 default gt = DaypartsCalendar(
     ("20 Aug 2021", "Afternoon"), 
@@ -30,7 +31,12 @@ The available names are:
     {days_passed} ## Numeric count of days passed
     {day_part} ## String day part, as supplied in initialization
 ```
-    
+These names reflect the `@property` methods within the class, which return un-translated values that are then translated within the `__repr__` method.  
+Extending these to add your own should follow similar logic, perhaps using the `%char` values from [The Python Datetime Format Page](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) in a manner similar to `weekday`.
+
+## Displaying the information
+
+
 
 [![Support me on Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=19978585)
 
