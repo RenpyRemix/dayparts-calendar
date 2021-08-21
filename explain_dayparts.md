@@ -73,6 +73,7 @@ Advancing the current date or day part is done by using the `alter` method if th
     $ gt.alter(sleep=2, steps=2)
 
     # Negative numbers can be used if needed
+    # This would move to first day part of the day before and then two more steps back
     $ gt.alter(sleep=-1, steps=-2)
 ```
 
