@@ -88,16 +88,17 @@ All comparisons are passed a Date string or a tuple containing Date string and D
     if gt == ("03 Jun 2008", "Night"):
         pass
 ```
+Supported operands are `==`, `!=`, `<`, `<=`, `>` and `>=`  
 The logic of the comparison is done slightly differently depending on what operand and value is used:
 
-== "03 Jun 2008"
+`== "03 Jun 2008"`  
 Comparison is evaluated against the current day part of the supplied date. Thus if the date matches the test is valid.
 
-!= "03 Jun 2008"
+`!= "03 Jun 2008"`  
 Comparison is evaluated against the current day part of the supplied date and then toggled. Thus if the date matches the test is not valid.
 
-> "02 Jun 2008"
->= "02 Jun 2008"
+`> "02 Jun 2008"`  
+`>= "02 Jun 2008"`  
 Comparison is done against the last day part of the supplied date.
 
 Other comparisons where only the Date is supplied are done against the first day part of that date.
