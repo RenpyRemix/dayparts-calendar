@@ -55,6 +55,27 @@ You could add further methods to output in different ways, just remember to `ren
 
 ## Altering the Date or Day Part within the game
 
+Advancing the current date or day part is done by using the `alter` method if the instance and can be given parameters:
+```py
+    # With no keywords the day part just advances by one
+    # Note: This can cycle round to first day part of the next day
+    $ gt.alter()
+
+    # Using "sleep" keyword to sleep until the first day part of the next day
+    $ gt.alter(sleep=1)
+
+    # Using "steps" keyword to move a set number of day part steps
+    # This can also cause the day to change if those steps cycle through
+    $ gt.alter(steps=11)
+
+    # Both "sleep" and "steps" can be used together
+    # Note: The sleep is done first so the steps then count from the first day part
+    $ gt.alter(sleep=2, steps=2)
+
+    # Negative numbers can be used if needed
+    $ gt.alter(sleep=-1, steps=-2)
+```
+
 
 
 
