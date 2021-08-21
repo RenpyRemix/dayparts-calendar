@@ -55,7 +55,7 @@ You could add further methods to output in different ways, just remember to `ren
 
 ## Altering the Date or Day Part within the game
 
-Advancing the current date or day part is done by using the `alter` method if the instance and can be given parameters:
+Advancing the current date or day part is done by using the `alter` method of the instance and can be given parameters:
 ```py
     # With no keywords the day part just advances by one
     # Note: This can cycle round to first day part of the next day
@@ -76,8 +76,33 @@ Advancing the current date or day part is done by using the `alter` method if th
     # This would move to first day part of the day before and then two more steps back
     $ gt.alter(sleep=-1, steps=-2)
 ```
+You *could* add extra methods if wanted.
 
+## Testing against the Current Game Date and Day Part
 
+Through use of the dunder equality methods of the instance and include all the usual operands.
+All comparisons are passed a Date string or a tuple containing Date string and Day Part string.
+```py
+    if gt == "03 Jun 2008":
+        pass
+    if gt == ("03 Jun 2008", "Night"):
+        pass
+```
+The logic of the comparison is done slightly differently depending on what operand and value is used:
+
+== "03 Jun 2008"
+Comparison is evaluated against the current day part of the supplied date. Thus if the date matches the test is valid.
+
+!= "03 Jun 2008"
+Comparison is evaluated against the current day part of the supplied date and then toggled. Thus if the date matches the test is not valid.
+
+> "02 Jun 2008"
+>= "02 Jun 2008"
+Comparison is done against the last day part of the supplied date.
+
+Other comparisons where only the Date is supplied are done against the first day part of that date.
+
+#### If you find an error in any conparison test, please let me know and I will check it.
 
 
 
