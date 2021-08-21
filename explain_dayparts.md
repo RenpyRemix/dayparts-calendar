@@ -32,9 +32,30 @@ The available names are:
     {day_part} ## String day part, as supplied in initialization
 ```
 These names reflect the `@property` methods within the class, which return un-translated values that are then translated within the `__repr__` method.  
-Extending these to add your own should follow similar logic, perhaps using the `%char` values from [The Python Datetime Format Page](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) in a manner similar to `weekday`.
+Extending these to add your own should follow similar logic, perhaps using the `%char` values from [The Python Datetime Format Page](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) in a manner similar to `weekday`. Just remember to have the property methods return un-translated values if you want to run tests against them.
+
+The format passed or set there is used within the str/repr of the class and translation is applied there (within the `__repr__` method)
 
 ## Displaying the information
+
+The standard way to display information is to just call the `__repr__` method which is done when the class is read as a string.  
+Within Ren'Py this is done simply by using string interpolation:  
+```py
+## Presuming the variable gt was used to initialize the GameTime object
+
+screen viewdate():
+    vbox:
+        text "[gt]" ## Interpolation is advised
+        text str(gt) ## Alternate for places where interpolation is not supported
+
+label viewdate_label():
+    e "It is [gt]"
+```
+You could add further methods to output in different ways, just remember to `renpy.substitute` the return if you need it translated.
+
+## Altering the Date or Day Part within the game
+
+
 
 
 
